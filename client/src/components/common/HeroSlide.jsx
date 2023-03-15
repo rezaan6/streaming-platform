@@ -3,7 +3,7 @@ import { Box, Button, Chip, Divider, Stack, Typography, useTheme } from "@mui/ma
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import { Autoplay } from "swiper";
+// import { Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { toast } from "react-toastify";
 
