@@ -1,7 +1,7 @@
 import axios from "axios";
 import queryString from "query-string";
 
-const baseURL = "https://streaming-platform-rezaan6.vercel.app/api/v1/";
+const baseURL = process.env.BASEURL;
 
 const privateClient = axios.create({
   baseURL,
