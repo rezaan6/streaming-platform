@@ -3,6 +3,8 @@
 ## Table of Contents
 
 - [Description](#description)
+  - [Client](#client)
+  - [Server](#server)
 - [Tech Stack](#tech-stack)
 - [Features](#features-wait-until-gifs-load)
 - [TMDB API](#tmdb-api)
