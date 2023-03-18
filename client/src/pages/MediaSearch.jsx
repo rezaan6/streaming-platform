@@ -8,7 +8,7 @@ import uiConfigs from "../configs/ui.configs";
 
 const mediaTypes = ["movie", "tv", "people"];
 let timer;
-const timeout = 500;
+const timeout = 1000;
 
 const MediaSearch = () => {
   const [query, setQuery] = useState("");
@@ -54,6 +54,10 @@ const MediaSearch = () => {
 
   const onQueryChange = (e) => {
     const newQuery = e.target.value;
+    if (!inputValue.endsWith(' ')) {
+      e.target.value = `${inputValue} `;
+    }
+
     clearTimeout(timer);
 
     timer = setTimeout(() => {
