@@ -59,7 +59,7 @@ Add and remove movies to/from Favorite list
 
 - Search functionality for movies, TV series, and people
 
-
+https://drive.google.com/open?id=1VJswCFOOKnSj8S-3YZ3e-iOMNHnTI0BX&authuser=rezaan6%40gmail.com&usp=drive_fs
 
 - Light and Dark theme support
 
