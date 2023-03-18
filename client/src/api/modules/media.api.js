@@ -29,12 +29,6 @@ const mediaApi = {
   search: async ({ mediaType, query, page }) => {
     try {
 
-      
-
-      if (!query.endsWith(' ')) {
-        query = `${query} `;
-      }
-
       const response = await publicClient.get(
         mediaEndpoints.search({ mediaType, query, page })
       );
