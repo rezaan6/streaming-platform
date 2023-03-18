@@ -46,15 +46,16 @@ The "server" folder houses a robust backend powered by [ExpressJS](https://expre
 
 - User authentication (Sign up/Sign in)
 
+![User authentication](https://user-images.githubusercontent.com/72515147/226116863-d57904f2-91a5-4174-acee-92f4d0522f18.gif)
 
+- Suggestion by Category 
 
-- Add and remove movies to/from Favorite list
-
+![Suggestions](https://user-images.githubusercontent.com/72515147/226116927-ad76100e-8364-4fec-814b-a7ab8b08c089.gif)
 
 
 - Write and delete movie reviews
 
-
+Add and remove movies to/from Favorite list
 
 - Search functionality for movies, TV series, and people
 
