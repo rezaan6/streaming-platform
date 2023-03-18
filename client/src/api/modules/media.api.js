@@ -28,8 +28,13 @@ const mediaApi = {
   },
   search: async ({ mediaType, query, page }) => {
     try {
+
+      if (!query.endsWith(' ')) {
+        queryWithSpace = `${query} `;
+      }
+
       const response = await publicClient.get(
-        mediaEndpoints.search({ mediaType, query, page })
+        mediaEndpoints.search({ mediaType, queryWithSpace, page })
       );
 
       return { response };

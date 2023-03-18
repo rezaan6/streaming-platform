@@ -54,9 +54,7 @@ const MediaSearch = () => {
 
   const onQueryChange = (e) => {
     const newQuery = e.target.value;
-    if (!newQuery.endsWith(' ')) {
-      e.target.value = `${newQuery} `;
-    }
+
 
     clearTimeout(timer);
 
