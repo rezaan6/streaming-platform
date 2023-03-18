@@ -44,37 +44,25 @@ The "server" folder houses a robust backend powered by [ExpressJS](https://expre
 
 ## Features (wait until GIFs load)
 
-- View Dashboard.
+- User authentication (Sign up/Sign in)
 
 
-- List of Crypto currency info.
+
+- Add and remove movies to/from Favorite list
 
 
-- Searchable list by crypto currencies.
+
+- Write and delete movie reviews
 
 
-- List of Crypto News.
+
+- Search functionality for movies, TV series, and people
 
 
-- Filter Crypto News by category.
+
+- Light and Dark theme support
 
 
-- View Crypto News. 
-
-
-- List of Exchanges rates Info
-
-
-- Details of a Cryptocurrency.
-
-
-- Links to list for a Cryptocurrency.
-
-
-- Chart view and filter by duration
-
-
-- Responsive Support
 
 
 ## TMDB API
