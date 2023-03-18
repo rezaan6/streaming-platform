@@ -2,27 +2,25 @@
 
 ## Table of Contents
 
-
-
 - [Description](#description)
 - [Tech Stack](#tech-stack)
 - [Features](#features-wait-until-gifs-load)
-- [Rapid API](#rapid-api)
-    - [CoinRanking](#coinranking)
-    - [Bing News Search](#bing-news-search)
+- [TMDB API](#tmdb-api)
 - [Format Configuration](#format-configuration)
 - [Folder Structure](#folder-structure)
 - [Environment Variables](#environment-variables)
 
 ## Description
 
-In summary, this project is a full-stack web application that combines the Vite framework, Tailwind CSS, Prettier, ExpressJS, Cloudinary, and MongoDB to deliver a dynamic and efficient user experience.The output of this project is a real-time, interactive application that allows users to generate unique images and art based on their descriptions in natural language. The generated content is then stored and managed using Cloudinary, making it accessible and shareable across the web.
+MoonStream is a full-stack MERN movie website, that offers a dynamic, responsive, and interactive user experience for movie enthusiasts. Users can explore a vast library of movies and TV series, search for their favorite titles, and enjoy personalized recommendations. The project comprises two main components: the "client" folder for the frontend and the "server" folder for the backend.
 
-Client
-The "client" folder is a front-end application built using the Vite framework. It utilizes the Tailwind CSS framework for styling and the Prettier library for code formatting to deliver a visually appealing and well-structured user interface. It also support TypeScript, and its deployed using Vercel
+### Client
 
-Server
-The "server" folder is a back-end component powered by ExpressJS. It uses Cloudinary to store and manage images, and is connected to a MongoDB database for persistent data storage. It also utilizes the OpenAI's DALL·E 2 AI system, which generates realistic images and art from a description in natural language and its deployed using Render
+The "client" folder contains a feature-rich frontend built with [Create React App](https://create-react-app.dev/), [Material UI](https://mui.com/) for styling and responsive design, [Swiper](https://swiperjs.com/) for carousel functionality, [React Router](https://reactrouter.com/) for seamless navigation, [Formik](https://formik.org/) and [Yup](https://github.com/jquense/yup) for form handling, and [Axios](https://axios-http.com/) for API calls. This visually appealing and well-structured user interface offers a smooth and intuitive browsing experience, and is deployed using [Vercel](https://vercel.com/docs).
+
+### Server
+
+The "server" folder houses a robust backend powered by [ExpressJS](https://expressjs.com/), [JWT](https://github.com/auth0/node-jsonwebtoken) for secure user authentication, [Mongoose](https://mongoosejs.com/) for persistent data storage in a MongoDB database, and Axios for interacting with the TMDB API. The [Express Validator](https://express-validator.github.io/docs/) library is also utilized for validating user inputs. This backend component manages user accounts, favorites, and reviews, ensuring a seamless experience across all aspects of the application. The server is deployed using a platform [Render](https://render.com/).
 
 ## Tech Stack
 
@@ -39,6 +37,8 @@ The "server" folder is a back-end component powered by ExpressJS. It uses Cloudi
 - [Swiper](https://swiperjs.com/)
 - [ThemovieDB](https://www.themoviedb.org)
 - [JWT](https://github.com/auth0/node-jsonwebtoken)
+- [Vercel](https://vercel.com/docs)
+- [Render](https://render.com/)
 
 ## Features (wait until GIFs load)
 
@@ -276,15 +276,23 @@ const tmdbEndpoints = {
 
 ## Environment Variables
 
-- Generated key availiable in [CoinRanking](https://rapidapi.com/Coinranking/api/coinranking1) under section "Endpoint".
+- Generated key available in your DB cluster connect option.
 ```
-REACT_APP_RAPIDAPI_KEY = 
-REACT_APP_CRYPTO_RAPIDAPI_HOST =
-REACT_APP_CRYPTO_API_URL = 
+MONGODB_URL = 
 ```
 
-- Generated key availiable in [Bing News Search](https://rapidapi.com/microsoft-azure-org-microsoft-cognitive-services/api/bing-news-search1) under section "Endpoint".
+- PORT is Default
 ```
-REACT_APP_NEWS_API_URL = '
-REACT_APP_NEWS_RAPIDAPI_HOST = 
+PORT=5000
+```
+
+- Generate using `openssl rand -base64 32`
+```
+TOKEN_SECRET=
+```
+
+- Generated key avaiable in [TMDB API](https://www.themoviedb.org/settings/api)
+```
+TMDB_BASE_URL= `e.g. https://api.themoviedb.org/3/` 
+TMDB_KEY=
 ```
