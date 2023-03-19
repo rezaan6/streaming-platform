@@ -60,6 +60,21 @@ The "server" folder houses a robust backend powered by [ExpressJS](https://expre
 
 ![Sort by Popular and Rated](https://user-images.githubusercontent.com/72515147/226122421-cae6b4c0-be7a-482e-970e-da0d43c31acc.gif)
 
+- Theme support from Dark/Light
+
+![Theme Switch](https://user-images.githubusercontent.com/72515147/226175263-46834f43-32cd-4f40-b1c6-5cd91987dec5.gif)
+
+- Details of Movie
+
+- Details of TV Show
+
+- Details of Person
+
+
+
+![Person](https://user-images.githubusercontent.com/72515147/226176096-a93143d4-ef4d-4fe4-b91d-9c320e7fbdd9.mp4)
+
+
 
 
 - Write and delete movie reviews
