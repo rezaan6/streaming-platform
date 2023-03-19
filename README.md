@@ -37,6 +37,7 @@ The "server" folder houses a robust backend powered by [ExpressJS](https://expre
 - [Yup](https://github.com/jquense/yup)
 - [Axios](https://axios-http.com/)
 - [Swiper](https://swiperjs.com/)
+- [Prettier](https://prettier.io/)
 - [ThemovieDB](https://www.themoviedb.org)
 - [JWT](https://github.com/auth0/node-jsonwebtoken)
 - [Vercel](https://vercel.com/docs)
