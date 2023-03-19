@@ -27,7 +27,10 @@ const PersonMediaGrid = ({ personId }) => {
   }, [personId]);
 
   const getReleaseDate = (media) => {
-    const date = media.media_type === tmdbConfigs.mediaType.movie ? new Date(media.release_date) : new Date(media.first_air_date);
+    const date =
+      media.media_type === tmdbConfigs.mediaType.movie
+        ? new Date(media.release_date)
+        : new Date(media.first_air_date);
     return date.getTime();
   };
 
@@ -45,14 +48,9 @@ const PersonMediaGrid = ({ personId }) => {
           </Grid>
         ))}
       </Grid>
-      {filteredMedias.length < medias.length && (
-        <Button onClick={onLoadMore}>
-          load more
-        </Button>
-      )}
+      {filteredMedias.length < medias.length && <Button onClick={onLoadMore}>load more</Button>}
     </>
   );
-
 };
 
 export default PersonMediaGrid;

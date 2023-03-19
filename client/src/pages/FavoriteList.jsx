@@ -30,20 +30,22 @@ const FavoriteItem = ({ media, onRemoved }) => {
     }
   };
 
-  return (<>
-    <MediaItem media={media} mediaType={media.mediaType} />
-    <LoadingButton
-      fullWidth
-      variant="contained"
-      sx={{ marginTop: 2 }}
-      startIcon={<DeleteIcon />}
-      loadingPosition="start"
-      loading={onRequest}
-      onClick={onRemove}
-    >
-      remove
-    </LoadingButton>
-  </>);
+  return (
+    <>
+      <MediaItem media={media} mediaType={media.mediaType} />
+      <LoadingButton
+        fullWidth
+        variant="contained"
+        sx={{ marginTop: 2 }}
+        startIcon={<DeleteIcon />}
+        loadingPosition="start"
+        loading={onRequest}
+        onClick={onRemove}
+      >
+        remove
+      </LoadingButton>
+    </>
+  );
 };
 
 const FavoriteList = () => {
@@ -79,7 +81,7 @@ const FavoriteList = () => {
   };
 
   const onRemoved = (id) => {
-    const newMedias = [...medias].filter(e => e.id !== id);
+    const newMedias = [...medias].filter((e) => e.id !== id);
     setMedias(newMedias);
     setFilteredMedias([...newMedias].splice(0, page * skip));
     setCount(count - 1);
@@ -95,9 +97,7 @@ const FavoriteList = () => {
             </Grid>
           ))}
         </Grid>
-        {filteredMedias.length < medias.length && (
-          <Button onClick={onLoadMore}>load more</Button>
-        )}
+        {filteredMedias.length < medias.length && <Button onClick={onLoadMore}>load more</Button>}
       </Container>
     </Box>
   );

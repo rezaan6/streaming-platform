@@ -8,7 +8,7 @@ import uiConfigs from "../configs/ui.configs";
 
 const mediaTypes = ["movie", "tv", "people"];
 let timer;
-const timeout = 1000;
+const timeout = 500;
 
 const MediaSearch = () => {
   const [query, setQuery] = useState("");
@@ -17,26 +17,35 @@ const MediaSearch = () => {
   const [medias, setMedias] = useState([]);
   const [page, setPage] = useState(1);
 
-  const search = useCallback(
-    async () => {
-      setOnSearch(true);
+  const search = useCallback(async () => {
+    setOnSearch(true);
 
-      const { response, err } = await mediaApi.search({
-        mediaType,
-        query,
-        page
-      });
+    const { response, err } = await mediaApi.search({
+      mediaType,
+      query,
+      page,
+    });
 
-      setOnSearch(false);
+    setOnSearch(false);
 
-      if (err) toast.error(err.message);
-      if (response) {
-        if (page > 1) setMedias(m => [...m, ...response.results]);
-        else setMedias([...response.results]);
+    if (err) toast.error(err.message);
+    if (response) {
+      // Filter the response array to remove records with empty profile_path
+      let filteredResults = response.results;
+      let fieldToFilter;
+      if (mediaType === "people") {
+        fieldToFilter = "profile_path";
+      } else if (mediaType === "tv" || mediaType === "movie") {
+        fieldToFilter = "poster_path";
       }
-    },
-    [mediaType, query, page],
-  );
+      if (fieldToFilter) {
+        filteredResults = filteredResults.filter((result) => result[fieldToFilter]);
+      }
+
+      if (page > 1) setMedias((m) => [...m, ...filteredResults]);
+      else setMedias([...filteredResults]);
+    }
+  }, [mediaType, query, page]);
 
   useEffect(() => {
     if (query.trim().length === 0) {
@@ -55,7 +64,6 @@ const MediaSearch = () => {
   const onQueryChange = (e) => {
     const newQuery = e.target.value;
 
-
     clearTimeout(timer);
 
     timer = setTimeout(() => {
@@ -68,19 +76,14 @@ const MediaSearch = () => {
       <Toolbar />
       <Box sx={{ ...uiConfigs.style.mainContent }}>
         <Stack spacing={2}>
-          <Stack
-            spacing={2}
-            direction="row"
-            justifyContent="center"
-            sx={{ width: "100%" }}
-          >
+          <Stack spacing={2} direction="row" justifyContent="center" sx={{ width: "100%" }}>
             {mediaTypes.map((item, index) => (
               <Button
                 size="large"
                 key={index}
                 variant={mediaType === item ? "contained" : "text"}
                 sx={{
-                  color: mediaType === item ? "primary.contrastText" : "text.primary"
+                  color: mediaType === item ? "primary.contrastText" : "text.primary",
                 }}
                 onClick={() => onCategoryChange(item)}
               >
@@ -98,13 +101,12 @@ const MediaSearch = () => {
 
           <MediaGrid medias={medias} mediaType={mediaType} />
 
-          {medias.length > 0 && (
-            <LoadingButton
-              loading={onSearch}
-              onClick={() => setPage(page + 1)}
-            >
+          {medias.length > 0 ? (
+            <LoadingButton loading={onSearch} onClick={() => setPage(page + 1)}>
               load more
             </LoadingButton>
+          ) : (
+            <span>Result not found</span>
           )}
         </Stack>
       </Box>

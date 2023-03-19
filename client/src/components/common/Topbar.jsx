@@ -19,14 +19,22 @@ const ScrollAppBar = ({ children, window }) => {
   const trigger = useScrollTrigger({
     disableHysteresis: true,
     threshold: 50,
-    target: window ? window() : undefined
+    target: window ? window() : undefined,
   });
 
   return cloneElement(children, {
     sx: {
-      color: trigger ? "text.primary" : themeMode === themeModes.dark ? "primary.contrastText" : "text.primary",
-      backgroundColor: trigger ? "background.paper" : themeMode === themeModes.dark ? "transparent" : "background.paper"
-    }
+      color: trigger
+        ? "text.primary"
+        : themeMode === themeModes.dark
+        ? "primary.contrastText"
+        : "text.primary",
+      backgroundColor: trigger
+        ? "background.paper"
+        : themeMode === themeModes.dark
+        ? "transparent"
+        : "background.paper",
+    },
   });
 };
 const Topbar = () => {
@@ -75,7 +83,7 @@ const Topbar = () => {
                   key={index}
                   sx={{
                     color: appState.includes(item.state) ? "primary.contrastText" : "inherit",
-                    mr: 2
+                    mr: 2,
                   }}
                   component={Link}
                   to={item.path}
@@ -84,10 +92,7 @@ const Topbar = () => {
                   {item.display}
                 </Button>
               ))}
-              <IconButton
-                sx={{ color: "inherit" }}
-                onClick={onSwithTheme}
-              >
+              <IconButton sx={{ color: "inherit" }} onClick={onSwithTheme}>
                 {themeMode === themeModes.dark && <DarkModeOutlinedIcon />}
                 {themeMode === themeModes.light && <WbSunnyOutlinedIcon />}
               </IconButton>
@@ -96,12 +101,11 @@ const Topbar = () => {
 
             {/* user menu */}
             <Stack spacing={3} direction="row" alignItems="center">
-              {!user && <Button
-                variant="contained"
-                onClick={() => dispatch(setAuthModalOpen(true))}
-              >
-                sign in
-              </Button>}
+              {!user && (
+                <Button variant="contained" onClick={() => dispatch(setAuthModalOpen(true))}>
+                  sign in
+                </Button>
+              )}
             </Stack>
             {user && <UserMenu />}
             {/* user menu */}

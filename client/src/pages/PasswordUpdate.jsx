@@ -22,7 +22,7 @@ const PasswordUpdate = () => {
     initialValues: {
       password: "",
       newPassword: "",
-      confirmNewPassword: ""
+      confirmNewPassword: "",
     },
     validationSchema: Yup.object({
       password: Yup.string()
@@ -34,9 +34,9 @@ const PasswordUpdate = () => {
       confirmNewPassword: Yup.string()
         .oneOf([Yup.ref("newPassword")], "confirmNewPassword not match")
         .min(8, "confirmNewPassword minimum 8 characters")
-        .required("confirmNewPassword is required")
+        .required("confirmNewPassword is required"),
     }),
-    onSubmit: async values => onUpdate(values)
+    onSubmit: async (values) => onUpdate(values),
   });
 
   const onUpdate = async (values) => {
@@ -92,7 +92,9 @@ const PasswordUpdate = () => {
               value={form.values.confirmNewPassword}
               onChange={form.handleChange}
               color="success"
-              error={form.touched.confirmNewPassword && form.errors.confirmNewPassword !== undefined}
+              error={
+                form.touched.confirmNewPassword && form.errors.confirmNewPassword !== undefined
+              }
               helperText={form.touched.confirmNewPassword && form.errors.confirmNewPassword}
             />
 

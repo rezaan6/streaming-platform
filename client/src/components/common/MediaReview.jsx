@@ -26,13 +26,15 @@ const ReviewItem = ({ review, onRemoved }) => {
   };
 
   return (
-    <Box sx={{
-      padding: 2,
-      borderRadius: "5px",
-      position: "relative",
-      opacity: onRequest ? 0.6 : 1,
-      "&:hover": { backgroundColor: "background.paper" }
-    }}>
+    <Box
+      sx={{
+        padding: 2,
+        borderRadius: "5px",
+        position: "relative",
+        opacity: onRequest ? 0.6 : 1,
+        "&:hover": { backgroundColor: "background.paper" },
+      }}
+    >
       <Stack direction="row" spacing={2}>
         {/* avatar */}
         <TextAvatar text={review.user.displayName} />
@@ -60,7 +62,7 @@ const ReviewItem = ({ review, onRemoved }) => {
                 position: { xs: "relative", md: "absolute" },
                 right: { xs: 0, md: "10px" },
                 marginTop: { xs: 2, md: 0 },
-                width: "max-content"
+                width: "max-content",
               }}
             >
               remove
@@ -98,7 +100,7 @@ const MediaReview = ({ reviews, media, mediaType }) => {
       mediaId: media.id,
       mediaType,
       mediaTitle: media.title || media.name,
-      mediaPoster: media.poster_path
+      mediaPoster: media.poster_path,
     };
 
     const { response, err } = await reviewApi.add(body);
@@ -121,12 +123,12 @@ const MediaReview = ({ reviews, media, mediaType }) => {
   };
 
   const onRemoved = (id) => {
-    if (listReviews.findIndex(e => e.id === id) !== -1) {
-      const newListReviews = [...listReviews].filter(e => e.id !== id);
+    if (listReviews.findIndex((e) => e.id === id) !== -1) {
+      const newListReviews = [...listReviews].filter((e) => e.id !== id);
       setListReviews(newListReviews);
       setFilteredReviews([...newListReviews].splice(0, page * skip));
     } else {
-      setFilteredReviews([...filteredReviews].filter(e => e.id !== id));
+      setFilteredReviews([...filteredReviews].filter((e) => e.id !== id));
     }
 
     setReviewCount(reviewCount - 1);
@@ -141,9 +143,11 @@ const MediaReview = ({ reviews, media, mediaType }) => {
           {filteredReviews.map((item) => (
             <Box key={item.id}>
               <ReviewItem review={item} onRemoved={onRemoved} />
-              <Divider sx={{
-                display: { xs: "block", md: "none" }
-              }} />
+              <Divider
+                sx={{
+                  display: { xs: "block", md: "none" },
+                }}
+              />
             </Box>
           ))}
           {filteredReviews.length < listReviews.length && (

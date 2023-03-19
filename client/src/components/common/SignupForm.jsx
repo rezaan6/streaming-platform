@@ -20,7 +20,7 @@ const SignupForm = ({ switchAuthState }) => {
       password: "",
       username: "",
       displayName: "",
-      confirmPassword: ""
+      confirmPassword: "",
     },
     validationSchema: Yup.object({
       username: Yup.string()
@@ -35,9 +35,9 @@ const SignupForm = ({ switchAuthState }) => {
       confirmPassword: Yup.string()
         .oneOf([Yup.ref("password")], "confirmPassword not match")
         .min(8, "confirmPassword minimum 8 characters")
-        .required("confirmPassword is required")
+        .required("confirmPassword is required"),
     }),
-    onSubmit: async values => {
+    onSubmit: async (values) => {
       setErrorMessage(undefined);
       setIsLoginRequest(true);
       console.log("asdasdasdasd");
@@ -52,7 +52,7 @@ const SignupForm = ({ switchAuthState }) => {
       }
 
       if (err) setErrorMessage(err.message);
-    }
+    },
   });
 
   return (
@@ -99,7 +99,9 @@ const SignupForm = ({ switchAuthState }) => {
           value={signinForm.values.confirmPassword}
           onChange={signinForm.handleChange}
           color="success"
-          error={signinForm.touched.confirmPassword && signinForm.errors.confirmPassword !== undefined}
+          error={
+            signinForm.touched.confirmPassword && signinForm.errors.confirmPassword !== undefined
+          }
           helperText={signinForm.touched.confirmPassword && signinForm.errors.confirmPassword}
         />
       </Stack>
@@ -115,17 +117,15 @@ const SignupForm = ({ switchAuthState }) => {
         sign up
       </LoadingButton>
 
-      <Button
-        fullWidth
-        sx={{ marginTop: 1 }}
-        onClick={() => switchAuthState()}
-      >
+      <Button fullWidth sx={{ marginTop: 1 }} onClick={() => switchAuthState()}>
         sign in
       </Button>
 
       {errorMessage && (
         <Box sx={{ marginTop: 2 }}>
-          <Alert severity="error" variant="outlined" >{errorMessage}</Alert>
+          <Alert severity="error" variant="outlined">
+            {errorMessage}
+          </Alert>
         </Box>
       )}
     </Box>

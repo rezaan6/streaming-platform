@@ -1,4 +1,4 @@
-import { Typography, useTheme } from '@mui/material';
+import { Typography, useTheme } from "@mui/material";
 
 const Logo = () => {
   const theme = useTheme();

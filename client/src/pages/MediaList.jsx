@@ -40,7 +40,7 @@ const MediaList = () => {
       const { response, err } = await mediaApi.getList({
         mediaType,
         mediaCategory: mediaCategories[currCategory],
-        page: currPage
+        page: currPage,
       });
 
       setMediaLoading(false);
@@ -48,7 +48,7 @@ const MediaList = () => {
 
       if (err) toast.error(err.message);
       if (response) {
-        if (currPage !== 1) setMedias(m => [...m, ...response.results]);
+        if (currPage !== 1) setMedias((m) => [...m, ...response.results]);
         else setMedias([...response.results]);
       }
     };
@@ -59,14 +59,7 @@ const MediaList = () => {
     }
 
     getMedias();
-  }, [
-    mediaType,
-    currCategory,
-    prevMediaType,
-    currPage,
-    mediaCategories,
-    dispatch
-  ]);
+  }, [mediaType, currCategory, prevMediaType, currPage, mediaCategories, dispatch]);
 
   const onCategoryChange = (categoryIndex) => {
     if (currCategory === categoryIndex) return;
@@ -98,7 +91,7 @@ const MediaList = () => {
                 size="large"
                 variant={currCategory === index ? "contained" : "text"}
                 sx={{
-                  color: currCategory === index ? "primary.contrastText" : "text.primary"
+                  color: currCategory === index ? "primary.contrastText" : "text.primary",
                 }}
                 onClick={() => onCategoryChange(index)}
               >
@@ -107,10 +100,7 @@ const MediaList = () => {
             ))}
           </Stack>
         </Stack>
-        <MediaGrid
-          medias={medias}
-          mediaType={mediaType}
-        />
+        <MediaGrid medias={medias} mediaType={mediaType} />
         <LoadingButton
           sx={{ marginTop: 8 }}
           fullWidth
