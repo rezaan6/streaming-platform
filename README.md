@@ -65,11 +65,11 @@ The "server" folder houses a robust backend powered by [ExpressJS](https://expre
 ![Theme Switch](https://user-images.githubusercontent.com/72515147/226175263-46834f43-32cd-4f40-b1c6-5cd91987dec5.gif)
 
 - Details of Movie
-- 
+
 ![Details of Movie](https://user-images.githubusercontent.com/72515147/226176728-397bb1e1-17b1-4904-af05-497487fcda52.gif)
 
 - Details of TV Show
-- 
+
 ![Details of TV Show](https://user-images.githubusercontent.com/72515147/226176845-06e38e92-b959-44b3-84d5-1c9830b56fc3.gif)
 
 - Details of Person
