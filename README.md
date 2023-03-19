@@ -66,7 +66,7 @@ The "server" folder houses a robust backend powered by [ExpressJS](https://expre
 
 - Details of Movie
 
-![Details of Movie](https://user-images.githubusercontent.com/72515147/226176728-397bb1e1-17b1-4904-af05-497487fcda52.gif)
+![Details of Movie](https://user-images.githubusercontent.com/72515147/226177470-46e282a3-1c3f-47d7-8df7-eda850ca4960.gif)
 
 - Details of TV Show
 
