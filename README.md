@@ -65,30 +65,28 @@ The "server" folder houses a robust backend powered by [ExpressJS](https://expre
 ![Theme Switch](https://user-images.githubusercontent.com/72515147/226175263-46834f43-32cd-4f40-b1c6-5cd91987dec5.gif)
 
 - Details of Movie
+- 
+![Details of Movie](https://user-images.githubusercontent.com/72515147/226176728-397bb1e1-17b1-4904-af05-497487fcda52.gif)
 
 - Details of TV Show
+- 
+![Details of TV Show](https://user-images.githubusercontent.com/72515147/226176845-06e38e92-b959-44b3-84d5-1c9830b56fc3.gif)
 
 - Details of Person
 
+![Details of Person](https://user-images.githubusercontent.com/72515147/226176987-4dd7cdf3-72da-482d-8b91-d28695f8dd25.gif)
 
+- Search by Movie/TV Show/Person
 
-![Person](https://user-images.githubusercontent.com/72515147/226176096-a93143d4-ef4d-4fe4-b91d-9c320e7fbdd9.mp4)
+![Search](https://user-images.githubusercontent.com/72515147/226177121-2d90040f-d219-4c86-ac62-bdbf292dacd8.gif)
 
+- Favourite List
 
+![Favourite](https://user-images.githubusercontent.com/72515147/226177237-0a00785e-d788-467d-a67c-056f68686af9.gif)
 
+- Write/Delete/View Review
 
-- Write and delete movie reviews
-
-Add and remove movies to/from Favorite list
-
-
-
-
-<a href="[https://drive.google.com/uc?export=view&id=XXX](https://drive.google.com/uc?export=view&id=1VJswCFOOKnSj8S-3YZ3e-iOMNHnTI0BX)"><img src="[https://drive.google.com/uc?export=view&id=XXX](https://drive.google.com/uc?export=view&id=1VJswCFOOKnSj8S-3YZ3e-iOMNHnTI0BX)" style="width: 500px; max-width: 100%; height: auto" title="Click for the larger version." /></a>
-- Light and Dark theme support
-
-
-
+![Review](https://user-images.githubusercontent.com/72515147/226177345-4c58d535-3af2-4194-9246-7489f502edda.gif)
 
 ## TMDB API
 
