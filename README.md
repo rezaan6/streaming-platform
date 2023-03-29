@@ -37,6 +37,7 @@ The "server" folder houses a robust backend powered by [ExpressJS](https://expre
 - [Yup](https://github.com/jquense/yup)
 - [Axios](https://axios-http.com/)
 - [Swiper](https://swiperjs.com/)
+- [Prettier](https://prettier.io/)
 - [ThemovieDB](https://www.themoviedb.org)
 - [JWT](https://github.com/auth0/node-jsonwebtoken)
 - [Vercel](https://vercel.com/docs)
@@ -60,20 +61,33 @@ The "server" folder houses a robust backend powered by [ExpressJS](https://expre
 
 ![Sort by Popular and Rated](https://user-images.githubusercontent.com/72515147/226122421-cae6b4c0-be7a-482e-970e-da0d43c31acc.gif)
 
+- Theme support from Dark/Light
 
+![Theme Switch](https://user-images.githubusercontent.com/72515147/226175263-46834f43-32cd-4f40-b1c6-5cd91987dec5.gif)
 
-- Write and delete movie reviews
+- Details of Movie
 
-Add and remove movies to/from Favorite list
+![Details of Movie](https://user-images.githubusercontent.com/72515147/226177470-46e282a3-1c3f-47d7-8df7-eda850ca4960.gif)
 
+- Details of TV Show
 
+![Details of TV Show](https://user-images.githubusercontent.com/72515147/226176845-06e38e92-b959-44b3-84d5-1c9830b56fc3.gif)
 
+- Details of Person
 
-<a href="[https://drive.google.com/uc?export=view&id=XXX](https://drive.google.com/uc?export=view&id=1VJswCFOOKnSj8S-3YZ3e-iOMNHnTI0BX)"><img src="[https://drive.google.com/uc?export=view&id=XXX](https://drive.google.com/uc?export=view&id=1VJswCFOOKnSj8S-3YZ3e-iOMNHnTI0BX)" style="width: 500px; max-width: 100%; height: auto" title="Click for the larger version." /></a>
-- Light and Dark theme support
+![Details of Person](https://user-images.githubusercontent.com/72515147/226176987-4dd7cdf3-72da-482d-8b91-d28695f8dd25.gif)
 
+- Search by Movie/TV Show/Person
 
+![Search](https://user-images.githubusercontent.com/72515147/226177121-2d90040f-d219-4c86-ac62-bdbf292dacd8.gif)
 
+- Favourite List
+
+![Favourite](https://user-images.githubusercontent.com/72515147/226177237-0a00785e-d788-467d-a67c-056f68686af9.gif)
+
+- Write/Delete/View Review
+
+![Review](https://user-images.githubusercontent.com/72515147/226177345-4c58d535-3af2-4194-9246-7489f502edda.gif)
 
 ## TMDB API
 
