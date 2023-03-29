@@ -4,9 +4,13 @@
   "version": "1.0.0",
   "author": "Rezaan Riyaz",
   "main": "index.js",
+  "engines":{
+    "node": "18.x"
+  },
   "license": "MIT",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "node index.js",
+    "dev": "nodemon index.js",
     "format": "prettier --write **/*.{js,jsx,json,md,ts,tsx,css}"
   },
   "dependencies": {
