@@ -1,7 +1,7 @@
 import axios from "axios";
 import queryString from "query-string";
 
-const baseURL = process.env.BASEURL ?? '';
+const baseURL = process.env.REACT_APP_BASEURL ?? '';
 
 const privateClient = axios.create({
   baseURL,
