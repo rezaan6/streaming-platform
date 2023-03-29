@@ -1,7 +1,7 @@
 import axios from "axios";
 import queryString from "query-string";
 
-const baseURL = "https://streaming-platform.onrender.com/api/v1/";
+const baseURL = process.env.BASEURL ?? '';
 
 const publicClient = axios.create({
   baseURL,
